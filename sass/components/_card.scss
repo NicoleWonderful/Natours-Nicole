@@ -1,0 +1,43 @@
+.card {
+  perspective: 1500px;  //透視,數字越小變化越大,越戲劇化ㄝ,為了不戲劇化說字要大點
+  -moz-perspective: 1500px;
+  position: relative;
+  height: 500px;
+
+  &__side {
+    height: 500px;
+    color: #fff;
+    transition: all .8s;
+    font-size: 20px;
+    height: 500px;
+    transition: all .8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;  //隱藏被旋轉的div元素背面
+    border-radius: 3px;
+    box-shadow: 0 15px 40px rgba($color-black, .15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
+  }
+
+  &:hover &__side--front {  //card:hover .card__side
+    transform: rotateY(180deg);
+  }
+  
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  
+}
