@@ -160,13 +160,10 @@ body {
   perspective: 1500px;
   -moz-perspective: 1500px;
   position: relative;
-  height: 500px; }
+  height: 520px; }
   .card__side {
-    height: 500px;
-    color: #fff;
+    height: 520px;
     transition: all .8s;
-    font-size: 20px;
-    height: 500px;
     transition: all .8s;
     position: absolute;
     top: 0;
@@ -178,13 +175,50 @@ body {
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
-      transform: rotateY(180deg); }
+      transform: rotateY(180deg);
+      background-color: pink; }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-160deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 230px;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+  .card__heading {
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    text-align: right;
+    width: 75%; }
+  .card__heading-span {
+    padding: 10px 15px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+  .card__details {
+    padding: 30px; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 15px;
+        padding: 10px; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
 
 .composition {
   position: relative; }
@@ -262,6 +296,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
   .header__logo-box {
