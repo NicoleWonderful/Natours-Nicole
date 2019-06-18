@@ -1,14 +1,29 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+}
+html {
+  font-size: 62.5%;   //rem是相對的單位,通常瀏覽器預設是16px,
+                      //我們會用這個預設的尺寸當作設定rem的基準,即是16px=1rem,
+                      //通常會把預設的尺寸設定在html,所以我們改動html尺寸rem會自動變化
+                      //1rem=10px  10px/16px = 62.5%
+  overflow-x: hidden; 
+  @include respond(big-desktop) {  // 1rem= 12px , 12/16=75%
+    font-size: 75%;
+  } 
+                      
+  @include respond(tab-land) {    // 1rem= 9px , 9/16=56.25%
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {    // 1rem = 8px , 8/16=50%
+    font-size: 50%;
+  }
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: $color-grey-dark;
-  padding: 30px;
+  box-sizing: border-box;
+  overflow-x: hidden; 
 }

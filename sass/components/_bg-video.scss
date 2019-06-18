@@ -1,0 +1,17 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        //控制置換元素的內容填入的位置及大小  置換元素指的是img、video 及 canvas …等，簡單說就是 tag 的 src 載入內容後，會取代原本元素。
+        object-fit: cover;
+    }
+}
