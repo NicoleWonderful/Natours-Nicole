@@ -27,3 +27,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; 
 }
+
+::selection {  //文字頁面被選取會有的效果
+  background-color: $color-primary;
+  color: $color-white;
+}
